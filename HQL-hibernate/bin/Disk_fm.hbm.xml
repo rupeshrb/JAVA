@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+<class name="com.mapping.flitered.Disk" table="disk_fm" schema="system">
+<id name="dskId" column="dskId" type="int" length="1">
+<generator class="increment"/>
+</id>
+<discriminator column="disc_type" type="string" length="40"/>
+
+<property name="dskName" column="dskName" type="string" length="10"/>
+<property name="dskPrice" column="dskPrice" type="int" />
+
+<subclass name="com.mapping.flitered.AudioDisk" discriminator-value="audio_disk">
+
+<property name="numSongs" column="numSongs" type="int" length="1"/>
+<property name="singerName" column="singerName" type="string" length="10"/>
+
+</subclass>
+
+<subclass name="com.mapping.flitered.VideoDisk" discriminator-value="video_disk">
+
+<property name="format" column="format" type="string" length="10"/>
+<property name="director" column="director" type="string" length="10"/>
+
+</subclass>
+
+</class>
+
+</hibernate-mapping> 

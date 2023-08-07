@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+<class name="com.demo.Disc" table="disc" schema="system">
+<id name="id" column="id" type="int" length="1">
+<generator class="increment"/>
+</id>
+
+<property name="name" column="name" type="string" length="25"/>
+<property name="type" column="type" type="string" length="25"/>
+<property name="price" column="price" type="float" length="25"/>
+
+</class>
+
+</hibernate-mapping> 

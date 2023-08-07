@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+<class name="com.composition.mapping.Person" table="person" schema="system">
+<id name="pid" column="pid" type="int" length="1">
+<generator class="increment"/>
+</id>
+
+<property name="name" column="name" type="string" length="25"/>
+<component name="bDate" class="com.composition.mapping.Date" >
+<property name="day" column="day" type="int" length="2"/>
+<property name="year" column="year" type="int" length="4"/>
+<property name="month" column="month" type="string" length="10"/>
+</component>
+
+</class>
+
+</hibernate-mapping> 
