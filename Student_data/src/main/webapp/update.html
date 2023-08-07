@@ -1,0 +1,211 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <style>
+	*{
+	padding: 0;
+	margin: 0;
+}
+body{
+  background: url(http://wrbbradio.org/wp-content/uploads/2016/10/grey-background-07.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+.container1{
+	background: #2d3e3f;
+	width: 350px;
+	height: 650px;
+	padding-bottom: 20px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+  padding: 50px 50px 10px 50px;
+ display: inline-block;
+}
+
+.fl{
+	float: left;
+  width: 110px;
+  line-height: 35px;
+}
+
+.fontLabel{
+  color: white;
+}
+
+.fr{
+	float: right;
+}
+
+.clr{
+	clear: both;
+}
+
+.box{
+	width: 360px;
+	height: 35px;
+	margin-top: 32px;
+	 align-items: center;
+	font-family: verdana;
+	font-size: 12px;
+}
+
+
+.textBox{
+	height: 35px;
+	width: 190px;
+	border: none;
+  padding-left: 20px;
+}
+
+.new{
+  float: left;
+}
+
+.iconBox{
+	height: 30px;
+	width: 30px;
+	line-height: 38px;
+	text-align: center;
+    margin-left: 15px;
+  background: #ff6600;
+}
+
+.radio{
+	color: white;
+	background: #2d3e3f;
+	line-height: 38px;
+}
+
+.terms{
+	line-height: 35px;
+	text-align: center;
+	background: #2d3e3f;
+	color: white;
+}
+
+.submit{
+	float: right;
+	border: none;
+	color: white;
+	width: 150px;
+	height: 35px;
+	background: #ff6600;
+	text-transform: uppercase;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+
+}
+
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body><div class="containerbig">
+    <!-- Body of Form starts -->
+  	<div class="container1">
+        <h2 style="text-align: center;  color: aliceblue;">Update data </h2>
+      <form autocomplete="on" action="update">
+        <!--First name-->
+    		<div class="box">
+          <label for="firstName" class="fl fontLabel"> Student_Id</label>
+    			<div class="new iconBox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+    			<div class="fr">
+    					<input type="text"  id="id" name="id"  placeholder="Student_Id"
+              class="textBox" autofocus="on" required>
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+    		<!--First name-->
+
+
+        <!--Second name-->
+    		<div class="box">
+          <label for="secondName" class="fl fontLabel"> Student_Name </label>
+    			<div class="fl iconBox"><i class="fa fa-user" aria-hidden="true"></i></div>
+    			<div class="fr">
+    					<input type="text" required name="name"
+              placeholder="Student_Name" id="name" name="name"  class="textBox">
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+    		<div class="box">
+          <label for="firstName" class="fl fontLabel"> Student_Email</label>
+    			<div class="new iconBox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+    			<div class="fr">
+    					<input type="text"  id="email" name="email"  placeholder="Student_Email"
+              class="textBox" autofocus="on" required>
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+    		<!--First name-->
+
+
+        <!--Second name-->
+    		<div class="box">
+          <label for="secondName" class="fl fontLabel"> Student_Phone </label>
+    			<div class="fl iconBox"><i class="fa fa-user" aria-hidden="true"></i></div>
+    			<div class="fr">
+    					<input type="text" required name="phone"
+              placeholder="Student_Phone" id="phone" name="phone"  class="textBox">
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+    		<!--Second name-->
+<!--Second name-->
+        <div class="box">
+    <label for="secondName" class="fl fontLabel"> New_password </label>
+          <div class="fl iconBox"><i class="fa fa-user" aria-hidden="true"></i></div>
+          <div class="fr">
+                  <input type="password" required name="password"
+        placeholder="New_password" id="password" name="password"  class="textBox">
+          </div>
+          <div class="clr"></div>
+      </div>
+
+    
+
+    		<!---Submit Button------>
+    		<div class="box" style="background: #2d3e3f">
+    				<input type="submit" name="submit" class="submit" value="Update">
+    		</div>
+    		<!---Submit Button----->
+      </form>
+     
+     
+     
+     
+     
+      <h2 style="text-align: center;  color: aliceblue; margin-top: 20px;">Delete Record </h2>
+      <form  autocomplete="on" action="delete">
+        <!--First name-->
+    		<div class="box">
+          <label for="firstName" class="fl fontLabel"> Delete Record ID</label>
+    			<div class="new iconBox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+    			<div class="fr">
+    					<input type="text"  id="id" name="id"  placeholder="Student_Id"
+              class="textBox" autofocus="on" required>
+    			</div>
+    	 <div class="clr"></div>
+      </div>
+    		<!---Submit Button------>
+    		<div class="box" style="background: #2d3e3f">
+    				<input type="submit" name="submit" id= "subemp" class="submit" value="Delete">
+            </div>
+            </form>
+
+      
+
+    </div>
+
+  </body>
+</html>
