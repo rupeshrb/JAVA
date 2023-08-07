@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+ 	
+ 	<context:component-scan base-package="com.core.annotation"/>
+		<context:annotation-config/>
+	<context:property-placeholder location="db.properties"/> 
+
+<!-- create a bean for the given class -->
+
+<!--<bean id="hello" class="com.core.HelloWorld">
+  <property name="message" value="welcome to spring 5.0.x"/>
+<property name="age" value="17"/>
+
+</bean>-->
+
+<!-- <bean id="data" class="com.student_marks.Stud_data">
+
+<constructor-arg index="0" value="1" />
+<constructor-arg index="1" value="rupesh" />
+<constructor-arg index="2" value="89" />
+<constructor-arg index="3" value="99" />
+
+</bean>
+<bean id="calcu" class="com.student_marks.Calculate">
+
+<constructor-arg ref="data"  />
+
+</bean>
+-->
+
+<bean id="mc" class="com.core.external.MasterCard"/>
+<bean id="pay" class="com.core.external.Payment">
+<property name="cd" ref="mc"/>
+</bean>
+<bean id="login" class="com.login.Login">
+<property name="user_name" value="${login.user}" />
+<property name="user_password" value="${login.password}" />
+<property name="port" value="${login.port}" /> 
+</bean>
+
+</beans>
