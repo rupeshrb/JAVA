@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+<class name="com.demo.Student_data" table="student" schema="system">
+<id name="studId" column="studid" type="int" length="1">
+<generator class="increment"/>
+</id>
+
+<property name="studName" column="studname" type="string" length="20"/>
+</class>
+
+</hibernate-mapping> 
